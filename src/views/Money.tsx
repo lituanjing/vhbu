@@ -13,6 +13,15 @@ const TagsSection = styled.section`
 `
 
 const NotesSection = styled.section`
+  background: #f5f5f5;
+  padding: 10px 16px;
+  font-size: 14px;
+  > label {
+    display: flex;
+    align-items: center;
+    > span { margin-right: 16px; white-space: nowrap; }
+    > input { display: block; width: 100%; }
+  }
 `
 const CategorySection = styled.section`
 `
