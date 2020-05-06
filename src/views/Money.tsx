@@ -3,7 +3,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TagsSection = styled.section`
-  background: #fff; padding: 12px 16px;
+  background: #fff; padding: 12px 16px; flex-grow: 1;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  align-items: flex-start;
   > ol { margin: 0 -12px;
     > li { background: #d9d9d9; border-radius: 18px; display: inline-block; padding: 4px 18px;
       font-size: 14px; margin: 8px 12px; }
@@ -20,6 +22,7 @@ const NotesSection = styled.section`
      background: none; border: none;}
   }
 `;
+
 const CategorySection = styled.section`
   font-size: 24px;
   > ul {
@@ -33,6 +36,7 @@ const CategorySection = styled.section`
     }
   }
 `;
+
 const NumberPadSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -77,10 +81,13 @@ const NumberPadSection = styled.section`
   }
 `;
 
+const MyLayout = styled(Layout)`
+  display: flex; flex-direction: column;
+`;
 
 const Money = () => {
   return (
-    <Layout>
+    <MyLayout>
       <TagsSection>
         <ol>
           <li>衣</li>
@@ -121,7 +128,7 @@ const Money = () => {
           <button>.</button>
         </div>
       </NumberPadSection>
-    </Layout>
+    </MyLayout>
   );
 };
 
