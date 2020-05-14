@@ -4,6 +4,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   > .output { background: #fff; font-size: 36px; line-height: 72px; text-align: right;
+  font-family: Consolas, monospace;
    padding: 0 16px;
    box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, .25),
    inset 0 5px 5px -5px rgba(0, 0, 0, .25); }
