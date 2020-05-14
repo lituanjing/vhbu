@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import Layout from 'components/Layout';
-import {useTags} from 'useTags';
+import {useTags} from 'hooks/useTags';
 import Icon from 'components/Icon';
 import {Button} from 'components/Button';
 import {Center} from 'components/Center';
