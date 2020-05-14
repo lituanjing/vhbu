@@ -17,8 +17,17 @@ export const useRecords = () => {
     setRecords(JSON.parse(window.localStorage.getItem('vhbu__records') || '[]'));
   }, []);
   const addRecord = (newRecord: NewRecordItem) => {
+    if (newRecord.amount <= 0) {
+      alert('请输入金额');
+      return false;
+    }
+    if (newRecord.tagIds.length === 0) {
+      alert('请选择标签');
+      return false;
+    }
     const record = {...newRecord, createdAt: (new Date().toISOString())};
     setRecords([...records, record]);
+    return true;
   };
   useUpdate(() => {
     window.localStorage.setItem('vhbu__records', JSON.stringify(records));
