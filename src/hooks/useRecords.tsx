@@ -31,7 +31,7 @@ export const useRecords = () => {
   };
   useUpdate(() => {
     window.localStorage.setItem('vhbu__records', JSON.stringify(records));
-  }, [records]);
+  }, records);
 
   return {records, setRecords, addRecord};
 };
