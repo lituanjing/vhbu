@@ -61,7 +61,7 @@ const Statistics = () => {
                          onChange={value => setCategory(value)}
         />
       </CategoryWrapper>
-      {array.map(([date, records]) => <div>
+      {array.map(([date, records]) => <div key={date}>
         <Header>{date}</Header>
         <div>
           {records.map(r => {
